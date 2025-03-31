@@ -1,0 +1,28 @@
+css Copy code body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100vh; /* Ensure #root spans the full height of the viewport */
+  width: 100%; /* Prevent horizontal overflow */
+}
+
+* {
+  box-sizing: border-box; /* Include padding and border in dimensions */
+  line-height: normal;
+  margin: 0; /* Remove all margins */
+  padding: 0; /* Remove all padding */
+}
+
+.container {
+  padding-left: 1px; /* Add space on the left for content visibility */
+  padding-right: 1px; /* Optional: Space on the right */
+  width: 100%; /* Prevent overflow due to content width */
+}
