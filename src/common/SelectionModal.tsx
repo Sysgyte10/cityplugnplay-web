@@ -22,7 +22,7 @@ export const SelectionModal: React.FC<ISelectionModalProps> = ({
           className='fixed top-0 left-0 right-0 bottom-0 bg-black/50 flex items-center justify-center z-50'
           onClick={() => onCloseModal()}>
           <div
-            className='bg-white rounded-lg shadow-lg sm:w-[80%] md:w-[50%] lg:w-[25%] h-[50%] py-3 overflow-y-scroll'
+            className='bg-white rounded-lg shadow-lg sm:w-[80%] md:w-[50%] lg:w-[25%] h-[50%] py-3 overflow-y-scroll scrollbar-hide'
             onClick={(e) => e.stopPropagation()}>
             {data &&
               data.map((item, index) => (

@@ -31,7 +31,7 @@ export const CustomSelectInput: React.FC<ISelectProps> = ({
       {/* 🔥 Switch behavior based on `useModal` */}
       {useModal ? (
         <div
-          className={`w-full py-3 px-3 pr-10 rounded-lg border-[1.5px] border-slate-300 shadow-sm bg-white appearance-none
+          className={`w-full py-3 px-3 rounded-lg border-[1.5px] border-slate-300 shadow-sm bg-white appearance-none
           ${disabled ? "bg-gray-100 cursor-not-allowed" : "cursor-pointer"}`}
           onClick={!disabled ? onClick : undefined}>
           <div className='flex justify-between items-center'>

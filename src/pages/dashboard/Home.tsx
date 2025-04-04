@@ -1,6 +1,7 @@
 import { useState } from "react";
 import {
   Airtime,
+  CableTV,
   Dashboard,
   Data,
   Sidebar,
@@ -58,6 +59,7 @@ export const Home = () => {
           {selectedSideBarItem === "Dashboard" && <Dashboard />}
           {selectedSideBarItem === "Airtime" && <Airtime />}
           {selectedSideBarItem === "Data" && <Data />}
+          {selectedSideBarItem === "TV" && <CableTV />}
         </div>
       </div>
     </div>

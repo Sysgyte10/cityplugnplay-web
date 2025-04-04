@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import {
-  airtimeServices,
-  dataBundleServices,
+  cableTvBundleServices,
+  cableTVServices,
 } from "../../../constants/services";
 import { ChevronRight } from "lucide-react";
 import { CustomButton, CustomSelectInput, CustomTextInput } from "../../shared";
@@ -37,16 +37,16 @@ export const CableTV: React.FC<{}> = () => {
             <div className='flex flex-row items-center space-x-2 w-full sm:w-[40%]'>
               <div className='w-10 h-10 rounded-full border-orange border'>
                 <img
-                  src={airtimeServices[selectedNetworkIndex].icon}
+                  src={cableTVServices[selectedNetworkIndex].icon}
                   className='w-full h-full object-cover'
                 />
               </div>
               <div className='flex flex-col'>
                 <p className='text-[#667185] font-normal font-satoshi text-xs'>
-                  Network
+                  Tv Subscription
                 </p>
                 <p className='text-black font-medium font-satoshi text-sm'>
-                  {airtimeServices[selectedNetworkIndex].name}
+                  {cableTVServices[selectedNetworkIndex].name}
                 </p>
               </div>
             </div>
@@ -54,14 +54,14 @@ export const CableTV: React.FC<{}> = () => {
             {/* Right Section - Inputs & Button */}
             <div className='w-full sm:w-[55%] mt-4 sm:mt-0'>
               <CustomSelectInput
-                label='Select Data Bundle'
+                label='Select TV Subscription'
                 useModal
                 value={selectedData}
                 onClick={() => setModalVisible(true)}
               />
               <CustomTextInput
-                placeHolder='Enter phone number'
-                label='Phone Number'
+                placeHolder='Enter IUC number'
+                label='IUC Number'
                 value=''
                 onChange={() => {}}
                 className='w-full'
@@ -84,8 +84,8 @@ export const CableTV: React.FC<{}> = () => {
           </div>
         ) : (
           <div className='bg-white shadow-xl rounded-md py-5 px-5 sm:w-[100%] md:w-[80%] lg:w-[60%] flex-col space-y-5 mt-5'>
-            {airtimeServices &&
-              airtimeServices.map((item, index) => (
+            {cableTVServices &&
+              cableTVServices.map((item, index) => (
                 <div
                   key={index}
                   className='flex flex-row items-center justify-between'>
@@ -98,7 +98,7 @@ export const CableTV: React.FC<{}> = () => {
                     </div>
                     <div className='flex flex-col'>
                       <p className='text-[#667185] font-normal font-satoshi text-xs'>
-                        Network
+                        Tv Subscription
                       </p>
                       <p className='text-black font-medium font-satoshi text-sm'>
                         {item?.name}
@@ -119,7 +119,7 @@ export const CableTV: React.FC<{}> = () => {
       </div>
       <SelectionModal
         visible={modalVisible}
-        data={dataBundleServices}
+        data={cableTvBundleServices}
         onSelect={(item) => {
           setSelectedData(item);
           setModalVisible(false);
