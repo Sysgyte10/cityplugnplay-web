@@ -1,5 +1,10 @@
 import { useState } from "react";
-import { Dashboard, Sidebar } from "../../components/dashboard/Home";
+import {
+  Airtime,
+  Dashboard,
+  Data,
+  Sidebar,
+} from "../../components/dashboard/Home";
 import { CustomTextInput } from "../../components/shared";
 import { Bell, ChevronDown, MessageCircleMore } from "lucide-react";
 
@@ -11,7 +16,10 @@ export const Home = () => {
       <div className='w-[15%] h-screen left-0 border-r border-r-[lightGrey]'>
         <Sidebar
           selectedItem={selectedSideBarItem}
-          setSelectedItem={(value) => setSelectedSideBarItem(value)}
+          setSelectedItem={(value) => {
+            setSelectedSideBarItem(value);
+            console.log(value);
+          }}
         />
       </div>
       <div className='flex flex-col w-[85%] bg-[#FDFDFD]'>
@@ -48,6 +56,8 @@ export const Home = () => {
         {/* main dashboard content */}
         <div className='flex flex-col'>
           {selectedSideBarItem === "Dashboard" && <Dashboard />}
+          {selectedSideBarItem === "Airtime" && <Airtime />}
+          {selectedSideBarItem === "Data" && <Data />}
         </div>
       </div>
     </div>
