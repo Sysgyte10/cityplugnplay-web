@@ -4,6 +4,8 @@ import {
   CableTV,
   Dashboard,
   Data,
+  Education,
+  Electricity,
   Sidebar,
 } from "../../components/dashboard/Home";
 import { CustomTextInput } from "../../components/shared";
@@ -60,6 +62,8 @@ export const Home = () => {
           {selectedSideBarItem === "Airtime" && <Airtime />}
           {selectedSideBarItem === "Data" && <Data />}
           {selectedSideBarItem === "TV" && <CableTV />}
+          {selectedSideBarItem === "Electricity" && <Electricity />}
+          {selectedSideBarItem === "Education" && <Education />}
         </div>
       </div>
     </div>
