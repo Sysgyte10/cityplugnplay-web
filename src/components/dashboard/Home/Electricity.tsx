@@ -83,7 +83,7 @@ export const Electricity: React.FC<{}> = () => {
           </div>
         </div>
       ) : (
-        <div className='bg-white shadow-xl rounded-md py-5 px-5 sm:w-[100%] md:w-[80%] lg:w-[60%] flex-col space-y-5 mt-5 h-[45%] overflow-y-scroll'>
+        <div className='bg-white shadow-xl rounded-md py-5 px-5 sm:w-[100%] md:w-[80%] lg:w-[60%] flex-col space-y-5 mt-5 h-[40%] overflow-y-scroll scrollbar-hide'>
           {electricityServices &&
             electricityServices.map((item, index) => (
               <div

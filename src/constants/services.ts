@@ -19,6 +19,9 @@ import Ibadan from "../assets/png/ibadan.jpg";
 import Benin from "../assets/png/benin.jpg";
 import Aba from "../assets/png/aba.jpg";
 import Yola from "../assets/png/yola.jpg";
+import Waec from "../assets/png/waec.png";
+import Jamb from "../assets/png/Jamb.png";
+
 export const airtimeServices = [
   {
     name: "Glo",
@@ -115,15 +118,15 @@ export const electricityServices = [
 export const educationServices = [
   {
     name: "WAEC Result Checker PIN",
-    icon: "",
+    icon: Waec,
   },
   {
     name: "WAEC Registration PIN",
-    icon: "",
+    icon: Waec,
   },
   {
     name: "JAMB Result Checker PIN",
-    icon: "",
+    icon: Jamb,
   },
 ];
 

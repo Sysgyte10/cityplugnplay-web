@@ -16,7 +16,7 @@ export const Home = () => {
     useState<string>("Dashboard");
   return (
     <div className='flex flex-row'>
-      <div className='w-[15%] h-screen left-0 border-r border-r-[lightGrey]'>
+      <div className='w-[15%] h-screen left-0 border-r border-r-[lightGrey] bg-white'>
         <Sidebar
           selectedItem={selectedSideBarItem}
           setSelectedItem={(value) => {
@@ -27,7 +27,7 @@ export const Home = () => {
       </div>
       <div className='flex flex-col w-[85%] bg-[#FDFDFD]'>
         {/* input and other items*/}
-        <div className='pt-3 flex items-center justify-end gap-4 px-2 border-b border-b-[lightGrey] bg-[white]'>
+        <div className='pt-3 flex items-center justify-end gap-4 px-2 border-b border-b-[lightGrey] bg-[white] fixed w-[85%]'>
           <div className='w-[30%]'>
             <CustomTextInput
               placeHolder='search here'
@@ -46,10 +46,7 @@ export const Home = () => {
           {/* user image and dropdown icon */}
           <div className='flex items-center mt-[-12px] gap-4'>
             <div className='w-8 h-8 bg-[#FFE7CC] rounded-full overflow-hidden'>
-              {/* <img
-                src=""
-              /> */}
-              <p>Hello</p>
+              <img src='' />
             </div>
             <button>
               <ChevronDown size={20} color='#667185' />
@@ -57,7 +54,7 @@ export const Home = () => {
           </div>
         </div>
         {/* main dashboard content */}
-        <div className='flex flex-col'>
+        <div className='flex flex-col pt-20'>
           {selectedSideBarItem === "Dashboard" && <Dashboard />}
           {selectedSideBarItem === "Airtime" && <Airtime />}
           {selectedSideBarItem === "Data" && <Data />}
