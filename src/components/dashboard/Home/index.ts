@@ -5,3 +5,4 @@ export * from "./Data";
 export * from "./CableTV";
 export * from "./Electricity";
 export * from "./Education";
+export * from "./Settings";

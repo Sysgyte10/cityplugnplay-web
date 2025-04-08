@@ -155,3 +155,24 @@ export const educationBundleServices = [
   "WAEC Result Checker PIN - 1,000 Naira",
   "WAEC Registration PIN - 5,000 Naira",
 ];
+
+export const moreSettingsItems = [
+  {
+    title: "Account",
+    subTitle: [
+      "Payment Options",
+      "Security Settings",
+      "Account Settings",
+      "Notification Settings",
+      "Edit Profile",
+    ],
+  },
+  {
+    title: "Financial",
+    subTitle: ["Wallet Account", "Add Bank Account", "View Added Banks"],
+  },
+  {
+    title: "General",
+    subTitle: ["Support", "Terms of Service", "Invite Friends"],
+  },
+];
