@@ -28,7 +28,7 @@ export const Home = () => {
       </div>
       <div className='flex flex-col w-[85%] bg-[#FDFDFD]'>
         {/* input and other items*/}
-        <div className='pt-3 flex items-center justify-end gap-4 px-2 border-b border-b-[lightGrey] bg-[white] fixed w-[85%]'>
+        <div className='pt-3 flex items-center justify-end gap-4 px-2 border-b border-b-[lightGrey] bg-[white] fixed w-[85%] z-50'>
           <div className='w-[30%]'>
             <CustomTextInput
               placeHolder='search here'

@@ -4,6 +4,7 @@ import { moreSettingsItems } from "../../../constants/services";
 import { PaymentOption } from "./Settings/PaymentOptions";
 import { AccountSettings } from "./Settings/AccountSettings";
 import { EditProfile } from "./Settings/EditProfile";
+import { WalletAccount } from "./Settings/WalletAccount";
 
 export const Settings: React.FC<{}> = () => {
   const [selectedItem, setSelectedItem] = React.useState<string>("Account");
@@ -44,7 +45,7 @@ export const Settings: React.FC<{}> = () => {
                 selectedItem === item?.title
                   ? "bg-orange text-white"
                   : "bg-transparent text-darkGrey"
-              } px-[13px] py-[10px] w-full text-sm font-medium ${
+              } px-[13px] py-[10px] w-full sm:text-xs md:text-xs lg:text-sm font-medium ${
                 index === 1
                   ? "border-r-[1.5px] border-r-[lightGrey] border-l-[1.5px] border-l-[lightGrey]"
                   : ""
@@ -81,6 +82,7 @@ export const Settings: React.FC<{}> = () => {
         {selectedSubtitleItem === "Payment Options" && <PaymentOption />}
         {selectedSubtitleItem === "Account Settings" && <AccountSettings />}
         {selectedSubtitleItem === "Edit Profile" && <EditProfile />}
+        {selectedSubtitleItem === "Wallet Account" && <WalletAccount />}
       </div>
     </div>
   );
